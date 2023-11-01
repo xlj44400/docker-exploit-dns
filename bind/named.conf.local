@@ -1,0 +1,26 @@
+//
+// Do any local configuration here
+//
+//include "/etc/bind/zones.rfc1918";
+
+## PlayStation blocking / redirecting
+zone "manuals.playstation.net" {
+    type master;
+    file "/etc/bind/custom_zones/db.manuals";
+};
+
+zone "update.playstation.net" {
+    type master;
+    file "/etc/bind/custom_zones/db.null";
+};
+
+zone "net.playstation.net" {
+    type master;
+    file "/etc/bind/custom_zones/db.null";
+};
+
+zone "dl.playstation.net" {
+    type master;
+    file "/etc/bind/custom_zones/db.null";
+};
+
